@@ -2,8 +2,7 @@
 
 describe('Menu', function(){
    let menu;
-   let dishes;
-   
+// 
    beforeEach(function() {
        menu = new Menu;
    });
@@ -14,6 +13,10 @@ describe('Menu', function(){
            "pizza": 8,
            "chicken curry": 7
        })
+   })
+
+   it('prints a menu for clients to read', function() {
+       expect(menu.print()).toEqual("fried rice: 4.00\npizza: 8.00\nchicken curry: 7.00\n")
    })
 
 })
