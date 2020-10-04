@@ -1,13 +1,14 @@
 'use strict';
 
 class Menu {
-    constructor() {
-
-        this.dishes = {
-            "fried rice": 4,
-            "pizza": 8,
-            "chicken curry": 7
-        }
+    constructor(dishes = { "fried rice": 4, "pizza": 8, "chicken curry": 7}) {
+        // this.dishes = {
+        //         "fried rice": 4,
+        //         "pizza": 8,
+        //         "chicken curry": 7
+        //     }
+            this.dishes = dishes;
+            // console.log(this.dishes)
     };
 
     print (){
@@ -19,5 +20,4 @@ class Menu {
         });
         return menuArray.join('');
     };
-
 }
