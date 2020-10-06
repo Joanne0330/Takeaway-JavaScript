@@ -15,18 +15,18 @@ describe('Takeaway', function() {
 
     it('can place an order of a dish and its quantity', function() {
         takeaway.order("pizza", 1);
-        expect(takeaway.basket).toEqual(["pizza X 1"])
+        expect(takeaway.basket).toEqual({"pizza": 1})
     })
     
     it('can order many dishes', function() {
         takeaway.order("pizza", 1);
         takeaway.order("fried rice", 2)
-        expect(takeaway.basket).toEqual(["pizza X 1", "fried rice X 2"])
+        expect(takeaway.basket).toEqual({"pizza": 1, "fried rice": 2})
     })
     
     it('cannot take an order outside of the menu', function() {
         takeaway.order("steak", 1);
-        expect(takeaway.basket).toEqual([]);
+        expect(takeaway.basket).toEqual({});
     })
 
    xit('can use a mock menu', function() {
