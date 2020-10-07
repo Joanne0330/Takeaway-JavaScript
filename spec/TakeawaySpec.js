@@ -2,7 +2,7 @@
 
 describe('Takeaway', function() {
     let takeaway;
-    let mockMenu;
+    // let mockMenu = {"bread": };
 
     beforeEach(function() {
         takeaway = new Takeaway;
